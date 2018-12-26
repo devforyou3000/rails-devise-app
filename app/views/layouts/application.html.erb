@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "Rails Devise" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Rails Devise" %>">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    
+    <%= stylesheet_link_tag 'style.css', media: 'all' %>
+    <%= stylesheet_link_tag 'default.css', media: 'all' %>
+  </head>
+  <body>
+    <header>
+      <%= render 'layouts/navigation' %>
+    </header>
+    <div role="main" class="row">
+       <%= render 'layouts/messages' %>
+       <%= yield %>
+    </div>
+    <%= javascript_include_tag 'jquery', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'bootstrap.min', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'wow.min', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'mb.bgndGallery', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'mb.bgndGallery.effects', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'jquery.simple-text-rotator.min', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'jquery.scrollTo.min', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'jquery.nav', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'modernizr.custom', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'grid', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'stellar', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'contactform', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'custom', 'data-turbolinks-track' => true %>
+  </body>
+</html>
